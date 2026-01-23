@@ -1,0 +1,11 @@
+def cel_to_ft(celsius):
+    return (celsius * 1.8) + 32
+
+
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = cel_to_ft(celsius)
+
+if fahrenheit < 32:
+    print(f"{celsius} Celsius is equivalent to {fahrenheit:.2f} Fahrenheit and is below freezing")
+else:
+    print(f"{celsius} Celsius is equivalent to {fahrenheit:.2f} Fahrenheit and is not below freezing")
