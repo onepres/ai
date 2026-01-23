@@ -1,0 +1,31 @@
+N = 4
+cols = set()
+d1 = set()
+d2 = set()
+
+board = [["."] * N for _ in range(N)]
+
+def solve(c=0):
+    if c == N:
+        return True
+
+    for r in range(N):
+        if r not in cols and (r - c) not in d1 and (r + c) not in d2:
+            board[r][c] = "Q"
+            cols.add(r)
+            d1.add(r - c)
+            d2.add(r + c)
+
+            if solve(c + 1):
+                return True
+
+            board[r][c] = "."
+            cols.remove(r)
+            d1.remove(r - c)
+            d2.remove(r + c)
+
+    return False
+
+
+solve()
+print("\n".join("".join(r) for r in board))
