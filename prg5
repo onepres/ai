@@ -1,0 +1,27 @@
+import math
+
+def mineatingspeed(piles, H):
+
+    def can_eat_all_bananas(s):
+        hours = 0
+        for pile in piles:
+            hours += math.ceil(pile / s)
+            if hours > H:
+                return False
+        return True
+
+    left, right = 1, max(piles)
+
+    while left < right:
+        mid = (left + right) // 2
+        if can_eat_all_bananas(mid):
+            right = mid
+        else:
+            left = mid + 1
+
+    return left
+
+
+piles = [3, 6, 7, 11]
+H = 8
+print(mineatingspeed(piles, H))
