@@ -1,0 +1,22 @@
+A = {10, 20, 30, 40, 50}
+B = {30, 40, 50, 60, 70}
+print("Set A:", A)
+print("Set B:", B)
+print("\n1. Union (A | B):", A | B)
+print("2. Intersection (A & B):", A & B)
+print("3. Difference (A - B):", A - B)
+print("4. Difference (B - A):", B - A)
+print("5. Symmetric Difference (A ^ B):", 
+A ^ B)
+C = {10, 20}
+print("\nSet C:", C)
+print("Is C subset of A?", C.issubset(A))
+print("Is A subset of C?", A.issubset(C))
+D = {80, 90}
+print("\nSet D:", D)
+print("Are A and D disjoint?", 
+A.isdisjoint(D))
+A.add(100)
+print("\nAfter adding 100 to A:", A)
+A.remove(10)
+print("After removing 10 from A:", A)
