@@ -1,0 +1,14 @@
+punctuation = "!@#$%^&*()_+=-
+[]{};:'\",<>./?"
+string = input("Enter the string: ")
+no_punc = ""
+for char in string:
+ if char not in punctuation:
+ no_punc = no_punc + char
+print(no_punc)
+
+string = input("Enter a string: ")
+words = string.split()
+words.sort()
+for word in words:
+ print(word)
