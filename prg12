@@ -1,0 +1,6 @@
+from nltk.stem import PorterStemmer
+words = ["program", "programs", "programmer", "programming", "programmed"]
+ps = PorterStemmer()
+
+for word in words:
+    print(f"{word} : {ps.stem(word)}")
